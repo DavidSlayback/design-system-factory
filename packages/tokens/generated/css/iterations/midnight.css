@@ -1,0 +1,30 @@
+[data-iteration="midnight"] {
+  --ds-action-danger-bg: var(--ds-color-danger-500);
+  --ds-action-danger-border: var(--ds-color-danger-500);
+  --ds-action-danger-fg: var(--ds-color-neutral-50);
+  --ds-action-danger-hover: var(--ds-color-danger-400);
+  --ds-action-primary-bg: var(--ds-color-brand-500);
+  --ds-action-primary-border: var(--ds-color-brand-500);
+  --ds-action-primary-fg: var(--ds-color-neutral-50);
+  --ds-action-primary-hover: var(--ds-color-brand-400);
+  --ds-action-secondary-bg: var(--ds-color-neutral-800);
+  --ds-action-secondary-border: var(--ds-color-neutral-600);
+  --ds-action-secondary-fg: var(--ds-color-neutral-100);
+  --ds-action-secondary-hover: var(--ds-color-neutral-700);
+  --ds-border-default: var(--ds-color-neutral-700);
+  --ds-border-strong: var(--ds-color-neutral-500);
+  --ds-content-inverse: var(--ds-color-neutral-900);
+  --ds-content-muted: var(--ds-color-neutral-400);
+  --ds-content-primary: var(--ds-color-neutral-50);
+  --ds-content-secondary: var(--ds-color-neutral-300);
+  --ds-feedback-danger-bg: var(--ds-color-danger-900);
+  --ds-feedback-danger-fg: var(--ds-color-danger-100);
+  --ds-feedback-success-bg: var(--ds-color-success-900);
+  --ds-feedback-success-fg: var(--ds-color-success-100);
+  --ds-feedback-warning-bg: var(--ds-color-warning-900);
+  --ds-feedback-warning-fg: var(--ds-color-warning-100);
+  --ds-focus-ring: var(--ds-color-brand-300);
+  --ds-surface-default: var(--ds-color-neutral-950);
+  --ds-surface-raised: var(--ds-color-neutral-900);
+  --ds-surface-sunken: var(--ds-color-neutral-800);
+}

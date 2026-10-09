@@ -44,15 +44,15 @@ function flatten(node, pathSegments, file, inheritedType, out) {
 
 /**
  * Load every *.tokens.json under `dir` into one combined token map.
- * File labels in errors are relative to the parent of `dir`, so tokens in the
- * package read as `tokens/semantic/base.tokens.json` and fixture files as
- * `<fixture-dir>/<file>.tokens.json`.
+ * File labels in errors are relative to `labelRoot` (default: the parent of
+ * `dir`), so base tokens read as `tokens/semantic/base.tokens.json` and
+ * iteration overrides as `iterations/<name>/overrides.tokens.json`.
  *
  * @param {string} dir - directory containing the DTCG token tree
+ * @param {string} [labelRoot] - root for relative file labels in errors
  * @returns {Promise<{dir: string, tokens: Map<string, {path: string[], type: string|undefined, value: unknown, file: string}>}>}
  */
-export async function loadTokenGraph(dir) {
-  const labelRoot = dirname(dir);
+export async function loadTokenGraph(dir, labelRoot = dirname(dir)) {
   const filePaths = await collectTokenFiles(dir);
   const tokens = new Map();
 

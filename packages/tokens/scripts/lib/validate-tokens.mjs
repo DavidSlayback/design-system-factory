@@ -21,7 +21,7 @@ export function extractRefs(value) {
 }
 
 /** The single reference a value consists of, or null when it is not one. */
-function fullValueRef(value) {
+export function fullValueRef(value) {
   if (typeof value !== "string") return null;
   const match = /^\{([^{}]+)\}$/.exec(value);
   return match === null ? null : match[1];
