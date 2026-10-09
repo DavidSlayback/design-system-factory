@@ -1,0 +1,8 @@
+{
+  "color": {
+    "broken": { "$type": "color", "$value": "{spacing.md}" }
+  },
+  "spacing": {
+    "md": { "$type": "dimension", "$value": "1rem" }
+  }
+}
