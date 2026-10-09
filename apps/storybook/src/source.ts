@@ -12,10 +12,9 @@ import {
   type TokenLeaf,
 } from "./token-docs/model";
 
-// Generated token CSS: base values on :root, per-iteration scopes as
-// [data-iteration="<name>"] blocks. base.css must load before the iteration
-// blocks; the eager glob below follows it.
-import "../../../packages/tokens/generated/css/base.css";
+// Per-iteration token scopes as [data-iteration="<name>"] blocks. Base CSS is
+// imported in .storybook/preview.tsx — in this module, the eager glob's
+// generated imports hoist above a static import and would invert the cascade.
 void import.meta.glob("../../../packages/tokens/generated/css/iterations/*.css", { eager: true });
 
 const tokenSourceFiles = import.meta.glob<string>(

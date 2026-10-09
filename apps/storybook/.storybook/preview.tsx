@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 import type { Decorator, Preview } from "@storybook/react-vite";
+// Base token values on :root must precede the iteration blocks in the bundle:
+// :root and [data-iteration] tie on specificity, so source order decides.
+// It lives in its own module because eager import.meta.glob statements are
+// hoisted above same-module static imports.
+import "../../../packages/tokens/generated/css/base.css";
 import { iterationSwitcherItems } from "../src/source";
+// The kit's class rules — every rule consumes semantic CSS variables, so the
+// token CSS above is what actually restyles components per iteration.
+import "@dsf/react/styles.css";
 import "../src/token-docs/docs.css";
 
 /**
