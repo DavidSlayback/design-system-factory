@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   ci:
-    name: Lint, typecheck, build
+    name: Lint, typecheck, test, build, determinism, Storybook
     runs-on: ubuntu-latest
     env:
       TURBO_TELEMETRY_DISABLED: "1"
@@ -31,8 +31,26 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # The full turbo graph: lint + typecheck + tests across all packages,
+      # and builds for tokens (generated CSS) and react (dist).
       - name: Lint, typecheck, test, and build (turbo graph)
         run: pnpm turbo run lint typecheck test build
 
       - name: Lint scaffold config files
         run: pnpm lint:root
+
+      # V3: two consecutive token builds must be byte-identical...
+      - name: Verify token build determinism
+        run: pnpm verify:determinism
+
+      # V3 (continued): ...and the regenerated tree must match what is
+      # committed — a diff here means generated outputs are stale or
+      # nondeterministic.
+      - name: Fail on token drift between rebuild and committed tree
+        run: git diff --exit-code -- packages/tokens/generated
+
+      # V1/V6: Storybook docs build through the turbo graph, which first
+      # rebuilds tokens + react so the docs always compile against current
+      # generated outputs.
+      - name: Build Storybook (turbo graph)
+        run: pnpm turbo run storybook:build

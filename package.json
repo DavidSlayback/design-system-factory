@@ -13,7 +13,8 @@
     "typecheck": "turbo run typecheck",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify:determinism": "node scripts/verify-determinism.mjs"
+    "verify:determinism": "node scripts/verify-determinism.mjs",
+    "storybook:build": "turbo run storybook:build"
   },
   "devDependencies": {
     "@eslint/js": "catalog:",

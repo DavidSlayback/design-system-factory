@@ -1,0 +1,27 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Design System Factory
+
+A core design language — W3C DTCG tokens, a small React component kit, and the
+pipeline that turns a config change into a new iteration of that language
+without forking components.
+
+## How this Storybook is organized
+
+- **Components** — the four kit components (Button, TextField, Card, Badge),
+  each styled entirely from semantic CSS custom properties.
+- **Design Tokens** — the token reference generated from the DTCG source at
+  build time, and the iteration comparison view.
+
+## Iterations
+
+An iteration is data, not a fork: a named directory of DTCG overrides layered
+over the shared semantic tier. The **Iteration** toolbar (paintbrush icon in
+the toolbar above the canvas) switches the rendered design language at runtime
+by setting `data-iteration` on `<html>` — core removes the attribute, every
+iteration re-maps semantic roles over the same component build.
+
+The dark theme in v1 is itself an iteration (`midnight`); there is no
+independent light/dark axis in the token model yet.

@@ -6,7 +6,11 @@
       "outputs": ["dist/**", "generated/**", "storybook-static/**"]
     },
     "lint": {},
-    "typecheck": {},
-    "test": { "cache": false }
+    "typecheck": { "dependsOn": ["^build"] },
+    "test": { "cache": false },
+    "storybook:build": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**"]
+    }
   }
 }

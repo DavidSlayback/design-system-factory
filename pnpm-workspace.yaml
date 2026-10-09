@@ -15,6 +15,14 @@ catalog:
   typescript-eslint: ^8.71.1
   eslint-config-prettier: ^10.1.8
   prettier: ^3.9.9
+  # Storybook 9 docs app
+  storybook: ^9.1.20
+  "@storybook/react-vite": ^9.1.20
+  "@storybook/addon-docs": ^9.1.20
+  "@storybook/addon-a11y": ^9.1.20
+  # vite: the app must provide it (builder-vite only declares a peer);
+  # ^7 is the overlap with vitest 5's supported range.
+  vite: ^7.3.7
   # Component kit (@dsf/react) — testing and type tooling
   "@testing-library/dom": ^10.4.2
   "@testing-library/jest-dom": ^7.0.1
