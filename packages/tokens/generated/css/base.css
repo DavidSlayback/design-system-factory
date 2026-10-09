@@ -1,0 +1,30 @@
+:root {
+  --ds-action-danger-bg: #dc2626;
+  --ds-action-danger-border: #dc2626;
+  --ds-action-danger-fg: #f9fafb;
+  --ds-action-danger-hover: #b91c1c;
+  --ds-action-primary-bg: #2563eb;
+  --ds-action-primary-border: #2563eb;
+  --ds-action-primary-fg: #f9fafb;
+  --ds-action-primary-hover: #1d4ed8;
+  --ds-action-secondary-bg: #f3f4f6;
+  --ds-action-secondary-border: #d1d5db;
+  --ds-action-secondary-fg: #374151;
+  --ds-action-secondary-hover: #e5e7eb;
+  --ds-border-default: #e5e7eb;
+  --ds-border-strong: #9ca3af;
+  --ds-content-inverse: #f9fafb;
+  --ds-content-muted: #9ca3af;
+  --ds-content-primary: #111827;
+  --ds-content-secondary: #4b5563;
+  --ds-feedback-danger-bg: #fef2f2;
+  --ds-feedback-danger-fg: #991b1b;
+  --ds-feedback-success-bg: #f0fdf4;
+  --ds-feedback-success-fg: #166534;
+  --ds-feedback-warning-bg: #fffbeb;
+  --ds-feedback-warning-fg: #92400e;
+  --ds-focus-ring: #3b82f6;
+  --ds-surface-default: #f3f4f6;
+  --ds-surface-raised: #f9fafb;
+  --ds-surface-sunken: #e5e7eb;
+}
