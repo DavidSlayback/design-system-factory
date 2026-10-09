@@ -12,12 +12,14 @@
     "lint:root": "eslint .",
     "typecheck": "turbo run typecheck",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "verify:determinism": "node scripts/verify-determinism.mjs"
   },
   "devDependencies": {
     "@eslint/js": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
+    "globals": "^17.13.0",
     "prettier": "catalog:",
     "turbo": "^2.11.7",
     "typescript": "catalog:",

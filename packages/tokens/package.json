@@ -1,0 +1,15 @@
+{
+  "name": "@dsf/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-tokens.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "style-dictionary": "catalog:",
+    "vitest": "catalog:"
+  }
+}

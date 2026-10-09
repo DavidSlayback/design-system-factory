@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint, typecheck, and build (turbo graph)
-        run: pnpm turbo run lint typecheck build
+      - name: Lint, typecheck, test, and build (turbo graph)
+        run: pnpm turbo run lint typecheck test build
 
       - name: Lint scaffold config files
         run: pnpm lint:root

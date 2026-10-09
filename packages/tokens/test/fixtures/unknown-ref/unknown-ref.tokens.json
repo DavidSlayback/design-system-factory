@@ -1,0 +1,5 @@
+{
+  "color": {
+    "link": { "$type": "color", "$value": "{color.missing.stop}" }
+  }
+}

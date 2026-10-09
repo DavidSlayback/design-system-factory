@@ -6,6 +6,7 @@
       "outputs": ["dist/**", "generated/**", "storybook-static/**"]
     },
     "lint": {},
-    "typecheck": {}
+    "typecheck": {},
+    "test": { "cache": false }
   }
 }
