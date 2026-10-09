@@ -1,0 +1,114 @@
+/*
+ * Docs-page styling for the token tables and iteration comparison view.
+ * Only layout here — every color flows from semantic custom properties so
+ * the pages themselves respond to the iteration toolbar.
+ */
+
+.dsf-docs-section {
+  margin-block: 2rem;
+}
+
+.dsf-docs-section > h2 {
+  margin-bottom: 0.75rem;
+}
+
+.dsf-docs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.dsf-docs-table th,
+.dsf-docs-table td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--ds-border-default);
+  vertical-align: middle;
+}
+
+.dsf-docs-table th {
+  color: var(--ds-content-secondary);
+  font-weight: 600;
+}
+
+.dsf-docs-table code {
+  font-size: 0.8125rem;
+}
+
+.dsf-docs-swatch {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--ds-border-default);
+  border-radius: var(--ds-radius-sm);
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.dsf-docs-value-ref {
+  display: block;
+  color: var(--ds-content-muted);
+  font-size: 0.75rem;
+}
+
+.dsf-docs-value-unresolved {
+  color: var(--ds-feedback-danger-fg);
+  background: var(--ds-feedback-danger-bg);
+  border-radius: var(--ds-radius-sm);
+  padding: 0 0.25rem;
+}
+
+.dsf-docs-value-core {
+  color: var(--ds-content-muted);
+  font-style: italic;
+}
+
+/* Iteration comparison: side-by-side themed columns. */
+.dsf-compare {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.dsf-compare__column {
+  flex: 1 1 20rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ds-border-default);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-surface-default);
+  color: var(--ds-content-primary);
+}
+
+.dsf-compare__column > h3 {
+  margin-top: 0;
+}
+
+.dsf-compare__samples {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dsf-compare__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.dsf-compare__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dsf-compare__card-title {
+  margin: 0 0 0.5rem;
+  font-size: var(--ds-typography-size-lg);
+  line-height: var(--ds-typography-line-height-lg);
+}
+
+.dsf-compare__card-body {
+  margin: 0 0 0.75rem;
+  color: var(--ds-content-secondary);
+}
