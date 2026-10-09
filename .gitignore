@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+coverage/
+storybook-static/
+
+# tooling caches
+.turbo/
+*.tsbuildinfo
+.eslintcache
+
+# env & logs
+.env*
+*.log
+
+# OS
+.DS_Store
+
+# NOTE: packages/tokens/generated is intentionally NOT ignored —
+# generated token artifacts are committed, and CI's determinism check
+# diffs a fresh rebuild against the tracked tree.
