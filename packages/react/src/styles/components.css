@@ -1,0 +1,112 @@
+/*
+ * Structural styles for the @dsf/react component kit.
+ *
+ * Every color flows in through semantic custom properties emitted by
+ * @dsf/tokens (packages/tokens/generated/css/base.css), so a single build
+ * serves every iteration — theming switches at runtime via data-iteration.
+ * Padding, radius, and font sizes here are structural (v1 ships no semantic
+ * spacing or typography tier); no color literals of any kind may appear.
+ */
+
+/* Button */
+.dsf-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ds-action-primary-border);
+  border-radius: 0.375rem;
+  background: var(--ds-action-primary-bg);
+  color: var(--ds-action-primary-fg);
+  font: inherit;
+  cursor: pointer;
+}
+.dsf-button:hover {
+  background: var(--ds-action-primary-hover);
+}
+.dsf-button:focus-visible {
+  outline: 2px solid var(--ds-focus-ring);
+  outline-offset: 2px;
+}
+.dsf-button--secondary {
+  border-color: var(--ds-action-secondary-border);
+  background: var(--ds-action-secondary-bg);
+  color: var(--ds-action-secondary-fg);
+}
+.dsf-button--secondary:hover {
+  background: var(--ds-action-secondary-hover);
+}
+.dsf-button--danger {
+  border-color: var(--ds-action-danger-border);
+  background: var(--ds-action-danger-bg);
+  color: var(--ds-action-danger-fg);
+}
+.dsf-button--danger:hover {
+  background: var(--ds-action-danger-hover);
+}
+
+/* TextField */
+.dsf-text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.dsf-text-field__label {
+  color: var(--ds-content-primary);
+  font-size: 0.875rem;
+}
+.dsf-text-field__input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ds-border-default);
+  border-radius: 0.375rem;
+  background: var(--ds-surface-raised);
+  color: var(--ds-content-primary);
+  font: inherit;
+}
+.dsf-text-field__input:hover {
+  border-color: var(--ds-border-strong);
+}
+.dsf-text-field__input:focus-visible {
+  outline: 2px solid var(--ds-focus-ring);
+  outline-offset: 1px;
+}
+.dsf-text-field__input[aria-invalid="true"] {
+  border-color: var(--ds-action-danger-border);
+}
+.dsf-text-field__error {
+  color: var(--ds-feedback-danger-fg);
+  font-size: 0.875rem;
+}
+
+/* Card */
+.dsf-card {
+  padding: 1.5rem;
+  border: 1px solid var(--ds-border-default);
+  border-radius: 0.5rem;
+  background: var(--ds-surface-raised);
+  color: var(--ds-content-primary);
+}
+
+/* Badge */
+.dsf-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid var(--ds-border-default);
+  border-radius: 9999px;
+  background: var(--ds-surface-sunken);
+  color: var(--ds-content-secondary);
+  font-size: 0.75rem;
+}
+.dsf-badge--success {
+  border-color: var(--ds-feedback-success-bg);
+  background: var(--ds-feedback-success-bg);
+  color: var(--ds-feedback-success-fg);
+}
+.dsf-badge--warning {
+  border-color: var(--ds-feedback-warning-bg);
+  background: var(--ds-feedback-warning-bg);
+  color: var(--ds-feedback-warning-fg);
+}
+.dsf-badge--danger {
+  border-color: var(--ds-feedback-danger-bg);
+  background: var(--ds-feedback-danger-bg);
+  color: var(--ds-feedback-danger-fg);
+}
