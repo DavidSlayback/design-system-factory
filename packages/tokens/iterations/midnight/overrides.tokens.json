@@ -1,0 +1,54 @@
+{
+  "surface": {
+    "default": { "$type": "color", "$value": "{color.neutral.950}" },
+    "raised": { "$type": "color", "$value": "{color.neutral.900}" },
+    "sunken": { "$type": "color", "$value": "{color.neutral.800}" }
+  },
+  "content": {
+    "primary": { "$type": "color", "$value": "{color.neutral.50}" },
+    "secondary": { "$type": "color", "$value": "{color.neutral.300}" },
+    "muted": { "$type": "color", "$value": "{color.neutral.400}" },
+    "inverse": { "$type": "color", "$value": "{color.neutral.900}" }
+  },
+  "action": {
+    "primary": {
+      "bg": { "$type": "color", "$value": "{color.brand.500}" },
+      "fg": { "$type": "color", "$value": "{color.neutral.50}" },
+      "border": { "$type": "color", "$value": "{color.brand.500}" },
+      "hover": { "$type": "color", "$value": "{color.brand.400}" }
+    },
+    "secondary": {
+      "bg": { "$type": "color", "$value": "{color.neutral.800}" },
+      "fg": { "$type": "color", "$value": "{color.neutral.100}" },
+      "border": { "$type": "color", "$value": "{color.neutral.600}" },
+      "hover": { "$type": "color", "$value": "{color.neutral.700}" }
+    },
+    "danger": {
+      "bg": { "$type": "color", "$value": "{color.danger.500}" },
+      "fg": { "$type": "color", "$value": "{color.neutral.50}" },
+      "border": { "$type": "color", "$value": "{color.danger.500}" },
+      "hover": { "$type": "color", "$value": "{color.danger.400}" }
+    }
+  },
+  "feedback": {
+    "success": {
+      "bg": { "$type": "color", "$value": "{color.success.900}" },
+      "fg": { "$type": "color", "$value": "{color.success.100}" }
+    },
+    "warning": {
+      "bg": { "$type": "color", "$value": "{color.warning.900}" },
+      "fg": { "$type": "color", "$value": "{color.warning.100}" }
+    },
+    "danger": {
+      "bg": { "$type": "color", "$value": "{color.danger.900}" },
+      "fg": { "$type": "color", "$value": "{color.danger.100}" }
+    }
+  },
+  "border": {
+    "default": { "$type": "color", "$value": "{color.neutral.700}" },
+    "strong": { "$type": "color", "$value": "{color.neutral.500}" }
+  },
+  "focus": {
+    "ring": { "$type": "color", "$value": "{color.brand.300}" }
+  }
+}

@@ -93,6 +93,16 @@ importers:
         specifier: 'catalog:'
         version: 8.71.1(eslint@9.39.5)(typescript@5.9.3)
 
+  packages/cli:
+    dependencies:
+      '@dsf/tokens':
+        specifier: workspace:*
+        version: link:../tokens
+    devDependencies:
+      vitest:
+        specifier: 'catalog:'
+        version: 5.0.3(@types/node@22.20.5)(jsdom@30.1.2)(vite@8.3.4(@types/node@22.20.5)(yaml@2.9.1))
+
   packages/react:
     devDependencies:
       '@testing-library/dom':

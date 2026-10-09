@@ -1,0 +1,20 @@
+{
+  "name": "@dsf/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "dsf — Design System Factory CLI: scaffold and manage design language iterations.",
+  "bin": {
+    "dsf": "./bin/dsf.mjs"
+  },
+  "scripts": {
+    "build": "node bin/dsf.mjs --help",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dsf/tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}
